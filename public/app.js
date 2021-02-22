@@ -442,7 +442,7 @@ app.loadChecksListPage = function () {
                                 td3.innerHTML = state;
                                 td4.innerHTML = '<a href="/checks/edit?id=' + responsePayload.id + '">View / Edit / Delete</a>';
                             } else {
-                                console.log("Error trying to load check ID: ", checkId);
+                                // console.log("Error trying to load check ID: ", checkId);
                             }
                         });
                     });
@@ -517,7 +517,7 @@ app.tokenRenewalLoop = function () {
     setInterval(function () {
         app.renewToken(function (err) {
             if (!err) {
-                console.log("Token renewed successfully @ " + Date.now());
+                // console.log("Token renewed successfully @ " + Date.now());
             }
         });
     }, 1000 * 60);
