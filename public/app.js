@@ -4,7 +4,7 @@
  */
 
 // Container for frontend application
-var app = {};
+var app = {}
 
 // Config
 app.config = {
