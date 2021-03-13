@@ -1,41 +1,16 @@
 /*
  * Test runner
- *
+ * To run this file run -> node test
  */
-
-// Dependencies
-
-const helpers = require('../lib/helpers')
-const assert = require('assert')
 
 // Application logic for the test runner
 _app = {}
 
 // Container for the test
-_app.tests = {
-    'unit': {}
-}
+_app.tests = {}
 
-// Assert that getANumber function return a number
-_app.tests.unit['helper.getANumber should return a number'] = (done) => {
-    let val = helpers.getANumber()
-    assert.strictEqual(typeof (val), 'number')
-    done()
-}
-
-// Assert that getANumber function return 1
-_app.tests.unit['helper.getANumber should return 1'] = (done) => {
-    let val = helpers.getANumber()
-    assert.strictEqual(val, 1)
-    done()
-}
-
-// Assert that getANumber function return 2
-_app.tests.unit['helper.getANumber should return 2'] = (done) => {
-    let val = helpers.getANumber()
-    assert.strictEqual(val, 2)
-    done()
-}
+// Add on the unit test
+_app.tests.unit = require('./unit')
 
 // Count all the tests
 _app.countTests = () => {
@@ -132,7 +107,6 @@ _app.runTests = () => {
         }
     }
 }
-
 
 // Run the test
 _app.runTests()
